@@ -1,0 +1,35 @@
+.color-picker {
+  margin-top: 20px;
+}
+
+.blue-area {
+  background-color:#036ffc;
+}
+
+.yellow-area {
+  background-color: yellow;
+}
+
+.colors {
+  padding: 10px 10px;
+}
+
+.colors span {
+  width: 30px;
+  height: 30px;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.active {
+  border: solid 2px darkslategray;
+}
+
+.ml-10 {
+  margin-left: 10px;
+}
+
+.result {
+  border: 1px solid red;
+  padding: 10px;
+}
