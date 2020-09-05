@@ -6,14 +6,8 @@ export default class ChangeFont extends React.Component {
     this.state = {fontSize: this.props.fontSize}
   }
 
-  onChangeFontSize = (method) => {
-    if(method === '+') {
-      this.setState({ fontSize: this.state.fontSize + 1})
-    }
-    else {
-      this.setState({ fontSize: this.state.fontSize - 1})
-    }
-    this.props.onReceiveFontSize(this.state.fontSize, method)
+  onChangeFontSize = (value) => {
+    this.props.onReceiveFontSize(value)
   }
 
   render() {
@@ -23,8 +17,8 @@ export default class ChangeFont extends React.Component {
             Font Size
         </div>
         <div className='row colors'>
-          <button className='btn btn-primary' onClick={() => this.onChangeFontSize('+')}>Tăng</button>
-          <button className='btn btn-primary ml-10' onClick={ () => this.onChangeFontSize('-') }>Giảm</button>
+          <button className='btn btn-primary' onClick={() => this.onChangeFontSize(1)}>Tăng</button>
+          <button className='btn btn-primary ml-10' onClick={ () => this.onChangeFontSize(-1) }>Giảm</button>
         </div>
       </div>
     )

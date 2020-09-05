@@ -18,13 +18,8 @@ export default class ColorPickerApp extends React.Component {
     this.setState({ color: color })
   }
 
-  onChangeFontSize = (fontSize, method) => {
-    if(method === '+') {
-      this.setState({fontSize: fontSize + 1})  
-    }
-    else {
-      this.setState({fontSize: fontSize - 1})
-    }
+  onChangeFontSize = (value) => {
+    this.setState({fontSize: this.state.fontSize + value})
   }
 
   onReset = () => {
